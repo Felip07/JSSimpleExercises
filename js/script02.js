@@ -22,8 +22,9 @@ function JS0202() {
   document.write(
     `<br>Você nasceu em <strong>${ano}</strong>, portanto nasceu ${resultado}.`
   );
-}
 
+  document.write("<br><button>Recarregar</button>");
+}
 
 // Operadores Lógicos e Ternários
 function JS0203() {

@@ -33,9 +33,10 @@ function JS0105a() {
   var nNome = nome.length;
   var nomeMa = nome.toUpperCase();
   var nomeMi = nome.toLowerCase();
-  document.write(
-    `Olá, <b>${nome}</b>! Seu nome tem ${nNome} letras.<br>Seu nome em maiúsculas é ${nomeMa}.<br>Seu nome em minúsculas é ${nomeMi}.`
-  );
+  const conteudoDiv = document.getElementById("conteudo");
+  const newP = document.createElement("p");
+  newP.innerHTML = `*JS-01.05a*<br>Olá, <strong>${nome}</strong>! Seu nome tem <strong>${nNome}</strong> letras.<br>Seu nome em maiúsculas é <strong>${nomeMa}</strong>.<br>Seu nome em minúsculas é <strong>${nomeMi}</strong>.`;
+  conteudoDiv.appendChild(newP);
 }
 
 // Exemplo 05b
@@ -55,9 +56,10 @@ function JS0105b() {
     style: "currency",
     currency: "EUR",
   });
-  document.write(
-    `Seu futuro salário com duas casas decimais: ${salarioFloat}.<br>Seu futuro salário com vírgula: ${salarioVir}.<br>Seu futuro salário em moeda Real: ${salarioBRL}.<br>Seu futuro salário em moeda Euro: ${salarioEUR}.<br>Seu futuro salário em moeda Dólar: ${salarioUSD}.<br>`
-  );
+  const conteudoDiv = document.getElementById("conteudo");
+  const newP = document.createElement("p");
+  newP.innerHTML = `*JS-01.05b*<br>Seu futuro salário: <strong>${salario}</strong><br>Seu futuro salário com duas casas decimais: <strong>${salarioFloat}</strong>.<br>Seu futuro salário com vírgula: <strong>${salarioVir}</strong>.<br>Seu futuro salário em moeda Real: <strong>${salarioBRL}</strong>.<br>Seu futuro salário em moeda Euro: <strong>${salarioEUR}</strong>.<br>Seu futuro salário em moeda Dólar: <strong>${salarioUSD}</strong>.<br>`;
+  conteudoDiv.appendChild(newP);
 }
 
 // Exemplo 06
@@ -68,7 +70,7 @@ function JS0106() {
   function operadores() {
     n = Number(window.prompt("Digite um número de 1 a 5:"));
 
-    if (n <= 5 && n >= 0) {
+    if (n <= 5 && n > 0) {
       // Soma
       var soma = n + n;
       document.write(`<br>A soma de ${n} e ${n} é igual a ${soma}. `);
