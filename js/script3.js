@@ -1,3 +1,5 @@
+
+
 function JS0301() {
     document.write(`<h1>Iniciando os estudos com DOM</>
     <p>Aprendendo a usar o <strong>DOM</> em Javascript.</>
