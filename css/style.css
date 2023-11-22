@@ -6,6 +6,27 @@ body {
 
 .container {
   padding: 10px;
+  display: grid;
+  justify-content: center;
+}
+
+.align-background{
+  background-color: #111111;
+  padding: 20px;
+  border: solid;
+  border-color: #edd446;
+}
+
+.container button {
+  background-color: #edd446;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+}
+
+.container button:hover{
+  cursor: pointer;
+  background-color: #ead979;
 }
 
 strong,

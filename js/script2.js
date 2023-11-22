@@ -28,16 +28,16 @@ function JS0202() {
 
 // Operadores Lógicos e Ternários
 function JS0203() {
-  newP.innerHTML += "*JS-02.3*";
+  newP.innerHTML = "";
 
   var ano = Number(window.prompt("Digite a série do aluno (1 a 9):"));
   var resultado = ano == 1 || ano == 9 ? "VERMELHO" : "AZUL";
-  newP.innerHTML += `<br>Categoria do aluno: ${resultado}.`;
-  conteudoDiv.appendChild(newP);
 
   var media = Number(prompt("Digite a média do aluno:"));
   var resultado = media >= 4 && media <= 5.5 ? "fará" : "não fará";
-  newP.innerHTML += `<br>Esse aluno <strong>${resultado}</strong> recuperação, pois teve média <strong>${media}</strong>.`;
+  newP.innerHTML += `*JS-02.3*<br>
+  Categoria do aluno: ${resultado}.<br>
+  Esse aluno <strong>${resultado}</strong> recuperação, pois teve média <strong>${media}</strong>.`;
 
   conteudoDiv.appendChild(newP);
 }

@@ -62,40 +62,31 @@ function JS0106() {
   n = Number(window.prompt("Digite um número de 1 a 5:"));
 
   if (n <= 5 && n > 0) {
-    newP.innerHTML += `*JS-01.6*`
-    // Soma
+
     var soma = n + n;
-    newP.innerHTML += `<br>A soma de ${n} e ${n} é igual a ${soma}. `;
-
-    // Multiplicação
     var multiplicacao = soma * n;
-    newP.innerHTML += `<br>A multiplicação de ${soma} e ${n} é igual a ${multiplicacao}. `;
-
-    // Subtração
     var subtracao = multiplicacao - n;
-    newP.innerHTML += `<br>A subtração de ${multiplicacao} e ${n} é igual a ${subtracao}`;
-
-    // Potência
     var potencia = subtracao ** n;
-    newP.innerHTML += `<br>A potência de ${subtracao} elevado a ${n} é igual a ${potencia}`;
-
-    // Divisão
     var divisao = potencia / n;
-    newP.innerHTML += `<br>A divisão de ${potencia} por ${n} é igual a ${divisao}`;
-
-    // Resto da Divisão
     var restoDivisao = divisao % n;
-    newP.innerHTML += `<br>O resto da divisão de ${divisao} por ${n} é igual a ${restoDivisao}<br>`;
-
-    // Operador de Atribuição x 3
-    restoDivisao += n;
-    newP.innerHTML += `<br>${restoDivisao}`;
-    restoDivisao += n;
-    newP.innerHTML += `<br>${restoDivisao}`;
-    restoDivisao += n;
-    newP.innerHTML += `<br>${restoDivisao}`;
     
-    conteudoDiv.appendChild(newP)
+
+    newP.innerHTML = `*JS-01.6*<br>
+    A soma de <strong>${n}</strong> e <strong>${n}</strong> é igual a <strong>${soma}</strong>.
+    <br>A multiplicação de <strong>${soma}</strong> e <strong>${n}</strong> é igual a <strong>${multiplicacao}</strong>. 
+    <br>A subtração de <strong>${multiplicacao}</strong> e <strong>${n}</strong> é igual a <strong>${subtracao}</strong>.
+    <br>A potência de <strong>${subtracao}</strong> elevado a <strong>${n}</strong> é igual a <strong>${potencia}</strong>.
+    <br>A divisão de <strong>${potencia}</strong> por <strong>${n}</strong> é igual a <strong>${divisao}</strong>.
+    <br>O resto da divisão de <strong>${divisao}</strong> por <strong>${n}</strong> é igual a <strong>${restoDivisao}</strong><br>`;
+
+    restoDivisao += n;
+    newP.innerHTML += `<br><strong>${restoDivisao}</strong>`;
+    restoDivisao += n;
+    newP.innerHTML += `<br><strong>${restoDivisao}</strong>`;
+    restoDivisao += n;
+    newP.innerHTML += `<br><strong>${restoDivisao}</strong>`;
+
+    conteudoDiv.appendChild(newP);
   } else {
     window.alert(`Numero invalido! Tente novamente`);
     JS0106();
